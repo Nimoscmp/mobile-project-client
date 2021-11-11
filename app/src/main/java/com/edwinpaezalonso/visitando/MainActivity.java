@@ -1,6 +1,8 @@
 package com.edwinpaezalonso.visitando;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.content.Intent;
 import android.graphics.drawable.TransitionDrawable;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         transition.startTransition(5000);
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.layout.menu_main, menu);
