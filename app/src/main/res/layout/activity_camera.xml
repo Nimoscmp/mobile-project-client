@@ -22,23 +22,24 @@
     <EditText
         android:id="@+id/editTextPhotoTitle"
         android:layout_width="190dp"
-        android:maxWidth="190dp"
-        android:layout_height="47dp"
-        android:textSize="25dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:maxWidth="190dp"
         android:text="@string/photo_title"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButtonTakePhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/diaphragm_1" />
+        app:srcCompat="@drawable/diaphragm_1"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
