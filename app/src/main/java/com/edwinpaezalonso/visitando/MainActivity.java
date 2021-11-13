@@ -3,6 +3,7 @@ package com.edwinpaezalonso.visitando;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.content.Intent;
 import android.graphics.drawable.TransitionDrawable;
@@ -87,8 +88,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchCameraActivity (View view) {
-        Intent cameraIntent = new Intent(this, CameraActivity.class);
-        startActivity(cameraIntent);
+        PackageManager packageManager = this.getPackageManager();
+
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+            Intent cameraIntent = new Intent(this, CameraActivity.class);
+            startActivity(cameraIntent);
+        } else {
+            Toast toastNoCamera =
+                Toast.makeText(MainActivity.this, "No se detectó la cámara", Toast.LENGTH_LONG);
+            toastNoCamera.show();
+        }
     }
 
     // public void lanzarAcercadeActivity(View view) {
