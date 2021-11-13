@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.edwinpaezalonso.visitando.view.CameraActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.menu_camara) {
+            launchCameraActivity(null);
+            return true;
+        }
+
 
         //  if (id == R.id.acercaDe) {
         //     lanzarAcercadeActivity(null);
@@ -79,6 +86,10 @@ public class MainActivity extends AppCompatActivity {
         toastj.show();
     }
 
+    public void launchCameraActivity (View view) {
+        Intent cameraIntent = new Intent(this, CameraActivity.class);
+        startActivity(cameraIntent);
+    }
 
     // public void lanzarAcercadeActivity(View view) {
 

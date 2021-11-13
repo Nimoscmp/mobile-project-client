@@ -25,6 +25,7 @@
         android:id="@+id/menu_camara"
         android:orderInCategory="85"
         android:icon="@drawable/slr_camera_application_slr_3037"
+
         app:showAsAction="always|collapseActionView"/>
 
 </menu>
