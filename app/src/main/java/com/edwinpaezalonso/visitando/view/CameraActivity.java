@@ -1,11 +1,15 @@
 package com.edwinpaezalonso.visitando.view;
 
+import static com.edwinpaezalonso.visitando.helpers.PhotoHelper.addWaterMark;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.ContactsContract;
@@ -55,7 +59,9 @@ public class CameraActivity extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK && data != null) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imagePhoto.setImageBitmap(imageBitmap);
+            Bitmap imageWithWatermark = addWaterMark(CameraActivity.this, imageBitmap, "VisitAndo");
+
+            imagePhoto.setImageBitmap(imageWithWatermark);
         }
     }
 }
