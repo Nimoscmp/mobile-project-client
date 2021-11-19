@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFF"
+    >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        android:hint="Ingrese E-mail"
+        android:id="@+id/editEmail" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:id="@+id/editPassword"
+        android:hint="Ingrese Contraseña" />
+
+    <Button
+        android:text="Registarme en VisitAndo"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#FFFF"
+        android:id="@+id/botonRegistro"
+        android:background="@color/colorPrimaryDark"/>
+
+    <Button
+        android:text="Olvidé mi contraseña"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:id="@+id/botonRecordar"
+        android:background="@null"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="10dp"
+        />
+</LinearLayout>

@@ -16,5 +16,4 @@
             android:contentDescription="portada"
             android:src="@drawable/magnifying" />
 
-
 </androidx.appcompat.widget.LinearLayoutCompat>

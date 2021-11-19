@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview1"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Format">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="fotografía"
+                android:src="@drawable/gran_hotel"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="El Gran Hotel"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/logo_tipo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Logo de Tipo Empresa"
+                android:src="@drawable/ic_arquitectonico"/>
+            <TextView
+                android:id="@+id/tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vista año 1.953" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/logo_direccion"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="logo de dirección"
+                android:src="@android:drawable/ic_menu_myplaces"/>
+            <TextView
+                android:id="@+id/direccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Contiguo a la Estación del Ferrocarril" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/descrip1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="logo de información"
+                android:src="@drawable/ic_info"/>
+            <TextView
+                android:id="@+id/info1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Propiedad del señor José Aljure e inaugurado en el año 1.930, se convirtió en uno de los hoteles más importantes de Girardot y uno de los impulsores del turismo. Con capacidad para 150 personas y amplios salones y comedores que fueron sede de banquetes en homenaje a presidentes de la república, ministros, gobernadores y parlamentarios. En sus tribunas, figuras como Jorge Eliécer Gaitán,Enrique Olaya Herrera, Alfonso López, Guillermo León Valencia, Eduardo Santos; llevaron a cabo discursos públicos." />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/costo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/moneda"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="logo de tarifa"
+                android:src="@drawable/ic_tarifa"/>
+            <TextView
+                android:id="@+id/tarifa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="     " />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/logo_horarios"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="logo de comentarios"
+                android:src="@drawable/ic_horario"/>
+            <TextView
+                android:id="@+id/comentario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="      " />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView>
