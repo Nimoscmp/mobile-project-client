@@ -1,6 +1,8 @@
 package com.edwinpaezalonso.visitando;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.content.Intent;
 import android.graphics.drawable.TransitionDrawable;
@@ -11,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.edwinpaezalonso.visitando.vista.ListaUnoActivity;
+import com.edwinpaezalonso.visitando.view.CameraActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         transition.startTransition(5000);
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.layout.menu_main, menu);
@@ -44,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.menu_mapa) {
             lanzarMapaActivity(null);
+            return true;
+        }
+
+        if (id == R.id.menu_camara) {
+            launchCameraActivity(null);
             return true;
         }
 
@@ -78,6 +87,18 @@ public class MainActivity extends AppCompatActivity {
         toastj.show();
     }
 
+    public void launchCameraActivity (View view) {
+        PackageManager packageManager = this.getPackageManager();
+
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA)) {
+            Intent cameraIntent = new Intent(this, CameraActivity.class);
+            startActivity(cameraIntent);
+        } else {
+            Toast toastNoCamera =
+                Toast.makeText(MainActivity.this, "No se detectó la cámara", Toast.LENGTH_LONG);
+            toastNoCamera.show();
+        }
+    }
 
     // public void lanzarAcercadeActivity(View view) {
 

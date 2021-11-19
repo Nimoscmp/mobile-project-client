@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="@color/colorLight"
+    tools:context=".view.CameraActivity">
+
+    <TextView
+        android:id="@+id/editTextPhotoTitle"
+        android:layout_width="172dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxWidth="190dp"
+        android:text="@string/photo_title"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTakePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/diaphragm_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhotoTitle">
+
+        <ImageView
+            android:id="@+id/imageViewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
