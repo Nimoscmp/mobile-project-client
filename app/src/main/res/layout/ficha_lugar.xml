@@ -21,7 +21,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
                 android:contentDescription="fotografía"
-                android:src="@drawable/catedral"/>
+                android:src="@drawable/gran_hotel"/>
 
         </FrameLayout>
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:gravity="center"
-            android:text="Catedral Inmaculado Corazón de Maria"
+            android:text="Nombre de lugar"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,12 +44,12 @@
                 android:contentDescription="Logo de Tipo Empresa"
                 android:src="@drawable/ic_arquitectonico"/>
             <TextView
-                android:id="@+id/tipo"
+                android:id="@+id/descripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Ubicada en el Parque Bolívar" />
+                android:text="Descripción corta" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Calle 18 entre Carreras 11 y 12" />
+                android:text="Dirección del lugar" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,12 +80,12 @@
                 android:contentDescription="logo de información"
                 android:src="@drawable/ic_info"/>
             <TextView
-                android:id="@+id/info1"
+                android:id="@+id/informacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Es la catedral de Girardot y pertenece a la Diócesis de Girardot (Establecida por el Papa Pio XII el 29 de mayo de 1.956). Su construcción fue finalizada en el año 1.978 y su inauguración se realizó el 16 de diciembre del mismo año. Su arquitectura tiene influencia alemana, ya que se construyó con apoyo de la Acción Episcopal Adveniat el diseñador fue el arquitecto Andrés Díaz Piedrahíta" />
+                android:text="Informacion del lugar" />
         </LinearLayout>
         <LinearLayout
             android:id="@+id/costo"
@@ -99,18 +99,18 @@
                 android:contentDescription="logo de tarifa"
                 android:src="@drawable/ic_tarifa"/>
             <TextView
-                android:id="@+id/tarifa"
+                android:id="@+id/precio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Sin costo- Libre acceso" />
+                android:text="Costo de visita" />
         </LinearLayout>
 
 
 
         <LinearLayout
-            android:id="@+id/hora"
+            android:id="@+id/horas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -121,12 +121,12 @@
                 android:contentDescription="logo de comentarios"
                 android:src="@drawable/ic_horario"/>
             <TextView
-                android:id="@+id/comentario"
+                android:id="@+id/horario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="       " />
+                android:text="Horario atencion      " />
         </LinearLayout>
 
 
