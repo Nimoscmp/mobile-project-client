@@ -12,8 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.edwinpaezalonso.visitando.vista.ListaUnoActivity;
-import com.edwinpaezalonso.visitando.vista.LocomotoraActivity;
+import com.edwinpaezalonso.visitando.vista.ListaActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -63,7 +62,7 @@ public class RegistroActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            startActivity(new Intent(getApplicationContext(), ListaUnoActivity.class));
+                            startActivity(new Intent(getApplicationContext(), ListaActivity.class));
                             finish();
                         }
                         else {
@@ -84,7 +83,7 @@ public class RegistroActivity extends AppCompatActivity {
         });
 
         if(firebaseAuth.getCurrentUser()!=null){
-            startActivity(new Intent(getApplicationContext(),ListaUnoActivity.class));
+            startActivity(new Intent(getApplicationContext(),ListaActivity.class));
         }
 
     }

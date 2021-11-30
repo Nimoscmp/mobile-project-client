@@ -10,9 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.edwinpaezalonso.visitando.vista.ListaUnoActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.edwinpaezalonso.visitando.vista.ListaActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -48,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        //  if (id == R.id.acercaDe) {
-        //     lanzarAcercadeActivity(null);
-        //   return true;
-        // }
+        if (id == R.id.menu_camara) {
+             lanzarAcercadeActivity(null);
+           return true;
+         }
         return super.onOptionsItemSelected(item);
 
 
@@ -79,11 +77,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    // public void lanzarAcercadeActivity(View view) {
+     public void lanzarAcercadeActivity(View view) {
 
-    //     Intent l = new Intent(MainActivity.this, AcercadeActivity.class);
-    //     startActivity(l);
-    // }
+         Intent l = new Intent(MainActivity.this, ListaActivity.class);
+         startActivity(l);
+     }
 
 }
 
